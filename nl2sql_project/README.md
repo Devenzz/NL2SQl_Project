@@ -24,32 +24,6 @@ It ensures accurate results by executing queries directly on the database, avoid
 ---
 
 ## ⚙️ Project Flow
-# 🚀 NL2SQL System using FastAPI
-
-## 📌 Overview
-This project converts **natural language queries** into **SQL queries** and executes them on a SQLite database.  
-It ensures accurate results by executing queries directly on the database, avoiding hallucinated outputs.
-
----
-
-## 🎯 Features
-- 🔹 Natural Language → SQL conversion using LLM
-- 🔹 Executes queries on real SQLite database
-- 🔹 Returns only actual database results
-- 🔹 Handles invalid or unrelated queries gracefully
-- 🔹 FastAPI backend with interactive Swagger UI
-
----
-
-## 🛠️ Tech Stack
-- **Python**
-- **FastAPI**
-- **SQLite**
-- **Groq API (LLaMA 3.1 model)**
-
----
-
-## ⚙️ Project Flow
 User Question → LLM → SQL Query → SQLite Database → Result
 
 ---
