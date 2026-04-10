@@ -1,31 +1,106 @@
-# NL2SQL System using FastAPI
+# 🚀 NL2SQL System using FastAPI
 
-## 🚀 Project Overview
-This project converts natural language queries into SQL and executes them on a SQLite database.
+## 📌 Overview
+This project converts **natural language queries** into **SQL queries** and executes them on a SQLite database.  
+It ensures accurate results by executing queries directly on the database, avoiding hallucinated outputs.
 
-## 🛠 Tech Stack
-- Python
-- FastAPI
-- SQLite
-- Groq LLM (LLaMA 3.1)
+---
 
-## 🔥 Features
-- Natural Language → SQL conversion
-- Executes queries on real database
-- Prevents hallucination (uses only DB results)
-- Handles invalid queries
-- FastAPI backend with Swagger UI
+## 🎯 Features
+- 🔹 Natural Language → SQL conversion using LLM
+- 🔹 Executes queries on real SQLite database
+- 🔹 Returns only actual database results
+- 🔹 Handles invalid or unrelated queries gracefully
+- 🔹 FastAPI backend with interactive Swagger UI
+
+---
+
+## 🛠️ Tech Stack
+- **Python**
+- **FastAPI**
+- **SQLite**
+- **Groq API (LLaMA 3.1 model)**
+
+---
+
+## ⚙️ Project Flow
+# 🚀 NL2SQL System using FastAPI
+
+## 📌 Overview
+This project converts **natural language queries** into **SQL queries** and executes them on a SQLite database.  
+It ensures accurate results by executing queries directly on the database, avoiding hallucinated outputs.
+
+---
+
+## 🎯 Features
+- 🔹 Natural Language → SQL conversion using LLM
+- 🔹 Executes queries on real SQLite database
+- 🔹 Returns only actual database results
+- 🔹 Handles invalid or unrelated queries gracefully
+- 🔹 FastAPI backend with interactive Swagger UI
+
+---
+
+## 🛠️ Tech Stack
+- **Python**
+- **FastAPI**
+- **SQLite**
+- **Groq API (LLaMA 3.1 model)**
+
+---
+
+## ⚙️ Project Flow
+User Question → LLM → SQL Query → SQLite Database → Result
+
+---
+
+## 📂 Project Structure
+```plaintex
+nl2sql_project/
+│
+├── api.py              # Main FastAPI application
+├── clinic.db           # SQLite database
+├── requirements.txt    # Dependencies
+├── README.md           # Project documentation
+├── .env.example        # Sample environment variables
+├── .gitignore          # Ignored files
+```
+
+---
 
 ## ▶️ How to Run
-
-### 1. Clone Repository
 ```bash
-git clone <your_repo_link>
+
+### 1️⃣ Clone the Repository
+git clone https://github.com/Devenzz/NL2SQl_Project
 cd nl2sql_project
 
-## How it Works
+### 2️⃣ Install Dependencies
+pip install -r requirements.txt
 
-1. User enters question in plain English
-2. LLM (Groq) converts it into SQL query
-3. SQL query runs on SQLite database
-4. Results are returned to user
+### 3️⃣ Setup Environment Variables
+Create a .env file and add:
+
+GROQ_API_KEY=  your_api_key_here
+
+### 4️⃣ Run the Application
+python -m uvicorn api:app --reload
+
+### 5️⃣ Open Swagger UI
+http://127.0.0.1:8000/docs
+
+🧪 Example Queries
+
+{
+  "question": "How many patients do we have?"
+}
+
+{
+  "question": "Show patients whose age is greater than 40"
+}
+
+```
+## 👨‍💻 Author
+**Devendra Gangurde**
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/devendra-gangurde-43620a262/)
